@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узбекистан глазами молодёжи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0d1a1c;
+            --ink-2: #081214;
+            --ink-soft: #142428;
+            --paper: #f8f1e3;
+            --paper-dim: #d4cbb8;
+            --muted: #8fa3a1;
+            --gold: #e8b84a;
+            --gold-soft: #f0c96a;
+            --teal: #1e8a9c;
+            --teal-soft: #4db8c9;
+            --red: #c94a3a;
+            --green: #2d8a5e;
+            --purple: #6b4c9a;
+            --line: rgba(248, 241, 227, 0.15);
+            --maxw: 1140px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--ink);
+            color: var(--paper);
+            font-family: 'Manrope', sans-serif;
+            font-size: 16px;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--ink-2);
+        }
+
+        .wrap {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse 70% 50% at 80% 20%, rgba(30, 138, 156, 0.35), transparent 55%),
+                radial-gradient(ellipse 50% 40% at 10% 80%, rgba(201, 74, 58, 0.25), transparent 50%),
+                radial-gradient(ellipse 40% 30% at 50% 50%, rgba(232, 184, 74, 0.12), transparent 50%),
+                var(--ink-2);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.7;
+            background-image:
+                repeating-linear-gradient(45deg, transparent, transparent 18px, rgba(232, 184, 74, 0.06) 18px, rgba(232, 184, 74, 0.06) 20px),
+                repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(30, 138, 156, 0.05) 18px, rgba(30, 138, 156, 0.05) 20px);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            padding: 80px 0 60px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 92px);
+            line-height: 1.02;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero h1 .line1 {
+            font-weight: 400;
+            color: var(--paper);
+        }
+
+        .hero h1 .line2 {
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--gold), var(--teal-soft), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            max-width: 540px;
+            margin-top: 28px;
+            font-size: 18px;
+            color: var(--paper-dim);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 36px;
+            padding: 10px 20px;
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 110px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        @media (max-width: 800px) {
+            .section {
+                padding: 80px 0;
+            }
+        }
+
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 28px;
+            max-width: 700px;
+        }
+
+        .lede {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(22px, 3.2vw, 34px);
+            line-height: 1.3;
+            max-width: 800px;
+            color: var(--paper);
+        }
+
+        .lede em {
+            font-style: italic;
+            color: var(--teal-soft);
+        }
+
+        .text {
+            max-width: 640px;
+            font-size: 17px;
+            color: var(--paper-dim);
+            margin-top: 20px;
+        }
+
+        .text+.text {
+            margin-top: 16px;
+        }
+
+        /* ===== INTRO ===== */
+        #intro .grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        @media (max-width: 800px) {
+            #intro .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== STATS ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stat-card {
+            background: var(--ink-soft);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 32px 26px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--teal), var(--red));
+        }
+
+        .stat-num {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(36px, 5vw, 52px);
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .stat-card:nth-child(2) .stat-num {
+            color: var(--teal-soft);
+        }
+
+        .stat-card:nth-child(3) .stat-num {
+            color: var(--red);
+        }
+
+        .stat-label {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--paper-dim);
+        }
+
+        /* ===== HERITAGE + GALLERY ===== */
+        #heritage {
+            background: var(--ink-soft);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 6px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            border: 1px solid var(--line);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.45s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .cap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 18px 16px 14px;
+            background: linear-gradient(transparent, rgba(8, 18, 20, 0.92));
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .gallery-item .cap span {
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        /* ===== ESSAYS ===== */
+        .essays-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 800px) {
+            .essays-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .essay-card {
+            background: var(--ink-soft);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .essay-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+        }
+
+        .essay-card .img-wrap {
+            height: 160px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .essay-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .essay-card:hover .img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .essay-card .content {
+            padding: 28px 26px 32px;
+            position: relative;
+        }
+
+        .essay-card .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(var(--gold), var(--teal), var(--red));
+        }
+
+        .essay-card h3 {
+            font-size: 21px;
+            margin-bottom: 14px;
+            color: var(--gold-soft);
+            padding-left: 12px;
+        }
+
+        .essay-card p {
+            font-size: 15.5px;
+            color: var(--paper-dim);
+            margin-bottom: 12px;
+            padding-left: 12px;
+            line-height: 1.6;
+        }
+
+        /* ===== CULTURE ===== */
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 36px;
+        }
+
+        @media (max-width: 800px) {
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== CULTURE ===== */
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .culture-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .c-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: var(--ink-soft);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .c-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .c-card .img-wrap {
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .c-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+
+        .c-card:hover .img-wrap img {
+            transform: scale(1.1);
+        }
+
+        .c-card .content {
+            padding: 26px 24px 30px;
+            flex-grow: 1;
+        }
+
+        .c-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--gold-soft);
+        }
+
+        .c-card p {
+            font-size: 15.5px;
+            color: var(--paper-dim);
+            line-height: 1.6;
+        }
+
+        /* Цветные полоски снизу картинки */
+        .c-card:nth-child(1) .img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #1e8a9c, #4db8c9);
+        }
+
+        .c-card:nth-child(2) .img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #e8b84a, #f0c96a);
+        }
+
+        .c-card:nth-child(3) .img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #c94a3a, #e07a6a);
+        }
+
+        /* ===== CLOSING ===== */
+        #closing {
+            padding: 140px 0 80px;
+            background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+        }
+
+        .closing-text {
+            font-size: clamp(28px, 4.5vw, 48px);
+            font-weight: 500;
+            max-width: 780px;
+            line-height: 1.25;
+        }
+
+        footer {
+            margin-top: 70px;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* decorative line */
+        .ornament {
+            height: 3px;
+            width: 80px;
+            background: linear-gradient(90deg, var(--gold), var(--teal), var(--red));
+            margin: 24px 0 32px;
+            border-radius: 2px;
+        }
+
+        /* ===== МИНИ-ИГРЫ ===== */
+        .game-section {
+            background: var(--ink-2);
+            padding: 80px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .game-box {
+            background: var(--ink-soft);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .game-title {
+            font-family: 'Fraunces', serif;
+            font-size: 26px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .game-desc {
+            color: var(--paper-dim);
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        /* Кликер */
+        #clicker-area {
+            position: relative;
+            height: 320px;
+            background: linear-gradient(135deg, #0f2428, #1a3a40);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: crosshair;
+            border: 1px solid var(--line);
+        }
+
+        .ornament {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            user-select: none;
+            animation: popIn 0.3s ease;
+            box-shadow: 0 0 15px rgba(232, 184, 74, 0.5);
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #clicker-score,
+        #clicker-timer {
+            font-size: 18px;
+            color: var(--gold);
+            margin-right: 24px;
+        }
+
+        /* Пазл */
+        #puzzle-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            max-width: 420px;
+            margin: 0 auto;
+            background: #000;
+            padding: 4px;
+            border-radius: 10px;
+        }
+
+        .puzzle-piece {
+            width: 100%;
+            aspect-ratio: 1;
+            background-size: 300% 300%;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .puzzle-piece:hover {
+            transform: scale(1.03);
+            z-index: 2;
+        }
+
+        .puzzle-piece.empty {
+            background: #1a2a2e !important;
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-pattern"></div>
+        <div class="wrap hero-inner">
+            <h1>
+                <span class="line1">Узбекистан</span>
+                <span class="line2">глазами молодёжи</span>
+            </h1>
+            <p class="hero-sub">Страна с древней историей и молодым сердцем. Как видит свою Родину поколение, которое
+                будет строить её будущее.</p>
+            <div class="hero-badge">Проект · 2026</div>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section" id="intro">
+        <div class="wrap grid">
+            <div>
+                <p class="lede">Молодёжь Узбекистана смотрит на свою страну <em>с гордостью и ответственностью</em>.</p>
+                <div class="ornament"></div>
+            </div>
+            <div>
+                <p class="text">Мы живём в стране, где купола Регистана соседствуют с современными IT-парками, а древние
+                    ремёсла продолжают жить в руках молодых мастеров.</p>
+                <p class="text">Этот проект — взгляд молодого поколения на наследие, возможности и задачи, которые стоят
+                    перед нами.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="section" id="stats">
+        <div class="wrap">
+            <h2 class="section-title">Молодая страна</h2>
+            <p class="text">Узбекистан — одна из самых молодых стран в мире по возрасту населения.</p>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-num">≈55%</div>
+                    <div class="stat-label">населения моложе 30 лет</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">35 лет</div>
+                    <div class="stat-label">нашей Независимости</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">39+ млн</div>
+                    <div class="stat-label">жителей страны</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HERITAGE -->
+    <section class="section" id="heritage">
+        <div class="wrap">
+            <h2 class="section-title">Наследие, которое вдохновляет</h2>
+            <p class="text">Самарканд, Бухара, Хива и Шахрисабз — города, входящие в список Всемирного наследия ЮНЕСКО.
+                Для молодёжи это не просто памятники, а живые символы силы, красоты и непрерывности нашей истории.</p>
+
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://img.magnific.com/premium-photo/historic-registan-square-samarkend-uzbekistan_932556-218.jpg?w=1500"
+                        alt="Регистан" loading="lazy">
+                    <div class="cap">Регистан <span>Самарканд</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ30IPvFZQlkGCXssKP-b7IyiyKR5TH60ijb7P82Mb4Pg&s=10"
+                        alt="Гур-Эмир" loading="lazy"
+                        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Guri_Amir.jpg/1280px-Guri_Amir.jpg'">
+                    <div class="cap">Гур-Эмир <span>Мавзолей Амира Тимура</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://avatars.mds.yandex.net/get-altay/14907426/2a000001981e9b3976f09796c1806388a0e5/L_height"
+                        alt="Шахи-Зинда" loading="lazy"
+                        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Shah-i-Zinda.jpg/1280px-Shah-i-Zinda.jpg'">
+                    <div class="cap">Шахи-Зинда <span>Самарканд</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Ark_Bukhara.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+                        alt="Арк" loading="lazy">
+                    <div class="cap">Арк <span>Бухара</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jiva%2C_Itchan_Kala_06.jpg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original"
+                        alt="Хива" loading="lazy"
+                        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Khiva.jpg/1280px-Khiva.jpg'">
+                    <div class="cap">Ичан-Кала <span>Хива</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.turkestantravel.com/wp-content/uploads/2020/11/Poi-Kalon.jpg"
+                        alt="Минарет Калян" loading="lazy"
+                        onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Kalyan_Mosque_Bukhara.jpg/1280px-Kalyan_Mosque_Bukhara.jpg'">
+                    <div class="cap">Минарет Калoн <span>Бухара</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESSAYS -->
+    <section class="section" id="essays">
+        <div class="wrap">
+            <h2 class="section-title">Сочинения</h2>
+            <p class="text">Несколько коротких размышлений на тему «Узбекистан глазами молодёжи».</p>
+
+            <div class="essays-grid">
+
+                <!-- 1 -->
+                <div class="essay-card">
+                    <div class="img-wrap">
+                        <img src="https://sun9-11.userapi.com/impg/6uBsv1fSO_fgSk0-Pg7MEfEktoLgr6I3oEiAqg/wgA69jVr6mk.jpg?size=2560x1707&quality=95&sign=de9ed18d5012e64d7e18d11caf8dc066&type=album"
+                            alt="Регистан" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Наследие и будущее</h3>
+                        <p>Когда я смотрю на Регистан, я вижу не только красоту прошлого. Я вижу пример того, как можно
+                            создавать вещи, которые переживают века. Молодёжь сегодня тоже хочет оставлять след — только
+                            уже в науке, технологиях, искусстве и предпринимательстве.</p>
+                        <p>Узбекистан даёт нам и корни, и крылья. Корни — в истории и традициях. Крылья — в образовании
+                            и возможностях XXI века.</p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="essay-card">
+                    <div class="img-wrap">
+                        <img src="https://www.gazeta.uz/media/img/2026/04/ttqjnghps3rj1jIkP2a17766853843256_l.webp"
+                            alt="Бухара" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Моя страна сегодня</h3>
+                        <p>Узбекистан глазами молодёжи — это страна, которая быстро меняется. Появляются новые
+                            университеты, IT-парки, молодёжные центры. Но самое важное — это ощущение, что будущее
+                            зависит и от нас.</p>
+                        <p>Мы хотим сохранить уважение к старшим, любовь к Родине и при этом быть современными,
+                            открытыми миру и готовыми к труду.</p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="essay-card">
+                    <div class="img-wrap">
+                        <img src="https://president.uz/uploads/2c6a85b7-2902-0b7e-8548-d9500522feae_lists_slider_8278.jpg"
+                            alt="Гур-Эмир" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Ответственность поколения</h3>
+                        <p>Каждое поколение получает страну от предыдущего и передаёт её следующему. Наше поколение
+                            получило независимый Узбекистан с богатой историей. Наша задача — сделать его ещё сильнее,
+                            справедливее и современнее.</p>
+                        <p>Это значит хорошо учиться, овладевать профессиями, беречь культуру и помогать своей махалле,
+                            городу и стране.</p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="essay-card">
+                    <div class="img-wrap">
+                        <img src="https://president.uz/uploads/80d7ae4f-b55e-a187-53e0-56abb3348e3f_lists_slider_8278.jpg"
+                            alt="Хива" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Гордость и мечта</h3>
+                        <p>Молодёжь гордится тем, что родилась в стране великих учёных, поэтов и строителей. Мы мечтаем,
+                            чтобы имя Узбекистана звучало в мире не только благодаря древним памятникам, но и благодаря
+                            успехам молодых людей в науке, спорте, бизнесе и творчестве.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CULTURE -->
+    <section class="section" id="culture">
+        <div class="wrap">
+            <h2 class="section-title">Культура и современность</h2>
+
+            <div class="culture-grid">
+
+                <!-- 1. Музыка и искусство -->
+                <div class="c-card">
+                    <div class="img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQatzbcmjThUcIuLD0G7iPGQNihBCu2nebpXN0mYcRs5C0YP7FQ7g2-FwGV&s=10"
+                            alt="Орнаменты Регистана" loading="lazy">
+                    </div>
+                    <div class="content">
+                        <h3>Музыка и искусство</h3>
+                        <p>Молодые музыканты соединяют маком с современными ритмами. Художники создают новые работы,
+                            вдохновлённые орнаментами Регистана и атласа.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Спорт -->
+                <div class="c-card">
+                    <div class="img-wrap">
+                        <img src="https://24.kg/files/media/341/341646.jpg" alt="Спорт Узбекистана" loading="lazy"
+                            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ark_of_Bukhara.jpg/800px-Ark_of_Bukhara.jpg'">
+                    </div>
+                    <div class="content">
+                        <h3>Спорт</h3>
+                        <p>Бокс, дзюдо, тхэквондо и футбол приносят Узбекистану медали. Спортивные успехи вдохновляют
+                            всю молодёжь страны.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Технологии -->
+                <div class="c-card">
+                    <div class="img-wrap">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1UkkZYKQM8VsxpMmmQToNvJ7HUgX4-bJ-SudU9yGc2v2nLS9EyrHO5mI&s=10"
+                            alt="Современный Узбекистан" loading="lazy"
+                            onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Kalyan_Minaret.jpg/800px-Kalyan_Minaret.jpg'">
+                    </div>
+                    <div class="content">
+                        <h3>Технологии</h3>
+                        <p>IT-парки, стартапы и цифровые сервисы развиваются быстро. Молодые специалисты уже создают
+                            продукты, которыми пользуются тысячи людей.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section id="closing">
+        <div class="wrap">
+            <p class="closing-text">Узбекистан глазами молодёжи — это страна, которую мы любим, которой гордимся и
+                которую вместе будем делать ещё лучше.</p>
+            <div class="ornament" style="margin-top:40px;"></div>
+            <footer>
+                <span>Davlatov Daler</span>
+                <span>Тема: Узбекистан глазами молодёжи</span>
+            </footer>
+        </div>
+    </section>
+
+
+    <!-- Спокойная музыка (работает) -->
+    <audio id="bgMusic" loop>
+        <!-- Вариант 1 -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3" type="audio/mpeg">
+
+        <!-- Вариант 2 (ещё один спокойный) -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" style="
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  z-index: 100;
+  background: rgba(20, 36, 40, 0.85);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+">
+        ♪ Музыка
+    </button>
+
+    <script>
+        const music = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        btn.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                btn.textContent = '♪ Музыка';
+            } else {
+                music.play();
+                btn.textContent = '❚❚ Пауза';
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+
+
+    <!-- ==================== МИНИ-ИГРЫ ==================== -->
+    <section class="game-section" id="games">
+        <div class="wrap">
+
+            <!-- ===== 1. КЛИКЕР ===== -->
+            <div class="game-box">
+                <h3 class="game-title">Собери орнаменты</h3>
+                <p class="game-desc">Кликай по золотым орнаментам! У тебя 30 секунд. Набери как можно больше очков.</p>
+
+                <div style="margin-bottom: 16px;">
+                    <span id="clicker-score">Очки: 0</span>
+                    <span id="clicker-timer">Время: 30</span>
+                    <button onclick="startClicker()" style="
+          background: var(--gold);
+          color: var(--ink);
+          border: none;
+          padding: 8px 18px;
+          border-radius: 20px;
+          font-weight: 600;
+          cursor: pointer;
+          margin-left: 10px;
+        ">Начать</button>
+                </div>
+
+                <div id="clicker-area"></div>
+            </div>
+    </section>
+
+    <script>
+        // ==================== КЛИКЕР ====================
+        let clickerScore = 0;
+        let clickerTime = 30;
+        let clickerInterval = null;
+        let spawnInterval = null;
+        let isClickerRunning = false;
+
+        function startClicker() {
+            if (isClickerRunning) return;
+
+            isClickerRunning = true;
+            clickerScore = 0;
+            clickerTime = 30;
+            document.getElementById('clicker-score').textContent = 'Очки: 0';
+            document.getElementById('clicker-timer').textContent = 'Время: 30';
+            document.getElementById('clicker-area').innerHTML = '';
+
+            clickerInterval = setInterval(() => {
+                clickerTime--;
+                document.getElementById('clicker-timer').textContent = `Время: ${clickerTime}`;
+
+                if (clickerTime <= 0) {
+                    clearInterval(clickerInterval);
+                    clearInterval(spawnInterval);
+                    isClickerRunning = false;
+                    document.getElementById('clicker-area').innerHTML =
+                        `<div style="display:flex;align-items:center;justify-content:center;height:100%;font-size:24px;color:var(--gold);">
+            Игра окончена! Твои очки: ${clickerScore}
+           </div>`;
+                }
+            }, 1000);
+
+            spawnInterval = setInterval(spawnOrnament, 700);
+        }
+
+        function spawnOrnament() {
+            if (!isClickerRunning) return;
+
+            const area = document.getElementById('clicker-area');
+            const ornament = document.createElement('div');
+            ornament.className = 'ornament';
+            ornament.textContent = '✦';
+
+            const x = Math.random() * (area.clientWidth - 50);
+            const y = Math.random() * (area.clientHeight - 50);
+            ornament.style.left = x + 'px';
+            ornament.style.top = y + 'px';
+
+            ornament.onclick = () => {
+                clickerScore += 10;
+                document.getElementById('clicker-score').textContent = `Очки: ${clickerScore}`;
+                ornament.remove();
+            };
+
+            area.appendChild(ornament);
+
+            setTimeout(() => {
+                if (ornament.parentNode) ornament.remove();
+            }, 1800);
+        }
+
+        // ==================== ПАЗЛ ====================
+        // Картинка берётся из файла registan.jpg (положи его рядом с HTML)
+        const puzzleImage = 'registan.jpg';
+
+        let puzzleState = [];
+        let emptyIndex = 8;
+
+        function initPuzzle() {
+            puzzleState = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+            // Перемешиваем
+            for (let i = puzzleState.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [puzzleState[i], puzzleState[j]] = [puzzleState[j], puzzleState[i]];
+            }
+
+            emptyIndex = puzzleState.indexOf(8);
+            document.getElementById('puzzle-status').textContent = '';
+            renderPuzzle();
+        }
+
+        function renderPuzzle() {
+            const board = document.getElementById('puzzle-board');
+            board.innerHTML = '';
+
+            puzzleState.forEach((num, index) => {
+                const piece = document.createElement('div');
+                piece.className = 'puzzle-piece';
+
+                if (num === 8) {
+                    piece.classList.add('empty');
+                } else {
+                    const row = Math.floor(num / 3);
+                    const col = num % 3;
+                    piece.style.backgroundImage = `url(${puzzleImage})`;
+                    piece.style.backgroundPosition = `-${col * 100}% -${row * 100}%`;
+                }
+
+                piece.onclick = () => movePiece(index);
+                board.appendChild(piece);
+            });
+        }
+
+        function movePiece(index) {
+            const empty = emptyIndex;
+            const row = Math.floor(index / 3);
+            const col = index % 3;
+            const emptyRow = Math.floor(empty / 3);
+            const emptyCol = empty % 3;
+
+            if ((Math.abs(row - emptyRow) === 1 && col === emptyCol) ||
+                (Math.abs(col - emptyCol) === 1 && row === emptyRow)) {
+
+                [puzzleState[index], puzzleState[empty]] = [puzzleState[empty], puzzleState[index]];
+                emptyIndex = index;
+                renderPuzzle();
+                checkWin();
+            }
+        }
+
+        function checkWin() {
+            const isWin = puzzleState.every((num, i) => num === i);
+            if (isWin) {
+                document.getElementById('puzzle-status').textContent = 'Поздравляем! Регистан собран! 🎉';
+            }
+        }
+
+        // Запускаем пазл при загрузке
+        initPuzzle();
+    </script>
+
+</body>
+
+</html>
